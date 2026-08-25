@@ -6,7 +6,7 @@
 - Routing of App
 - Login Form
 - Sign up Form
-- Form Validation
+- Form Validation (//if you build large form application you need library i.e. https://formik.org/)
 - useRef Hook
 
 # Features

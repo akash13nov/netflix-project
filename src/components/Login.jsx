@@ -1,8 +1,29 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import validate from "../utils/validate";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  const email = useRef(null);
+  const password = useRef(null);
+  const name = useRef(null);
+
+  const handleButtonClick = () => {
+    // validate the form data
+    //console.log(email.current.value);
+    //console.log(password.current.value);
+
+    const message = validate(
+      email.current.value,
+      password.current.value,
+      !isSignInForm ? name.current.value : undefined,
+    );
+    //console.log(message);
+    setErrorMessage(message);
+  };
+
   const toggleSignUpForm = () => {
     setIsSignInForm(!isSignInForm);
   };
@@ -16,36 +37,35 @@ const Login = () => {
             <h1 className="text-3xl font-bold text-white">
               {isSignInForm ? "Sign In" : "Sign Up"}
             </h1>
-            <f orm className="mt-4.5 flex flex-col gap-3.5 w-full">
-              // if you build large form application you need library i.e.
-              https://formik.org/
+            <form
+              onSubmit={(e) => e.preventDefault()}
+              className="mt-4.5 flex flex-col gap-3.5 w-full"
+            >
               {!isSignInForm && (
                 <input
+                  ref={name}
                   className="bg-gray-700 p-3 rounded text-white"
                   type="text"
                   placeholder="Name"
                 />
               )}
               <input
+                ref={email}
                 className="bg-gray-700 p-3 rounded text-white"
                 type="text"
                 placeholder="Email"
               />
               <input
+                ref={password}
                 className="bg-gray-700 p-3 rounded text-white"
                 type="password"
                 placeholder="Password"
               />
-              {!isSignInForm && (
-                <input
-                  className="bg-gray-700 p-3 rounded text-white"
-                  type="password"
-                  placeholder="Confirm Password"
-                />
-              )}
+              <p className="text-red-500">{errorMessage}</p>
               <button
                 className="text-white p-3 mt-3.5 rounded text-xl bg-red-600 cursor-pointer"
                 type="submit"
+                onClick={handleButtonClick}
               >
                 {isSignInForm ? "Sign In" : "Sign Up"}
               </button>
@@ -58,7 +78,7 @@ const Login = () => {
                   {isSignInForm ? "Sign up now" : "Sign in now"}
                 </span>
               </p>
-            </f>
+            </form>
           </div>
         </div>
       </div>
