@@ -6,8 +6,10 @@
 - Routing of App
 - Login Form
 - Sign up Form
-- Form Validation (//if you build large form application you need library i.e. https://formik.org/)
+- Form Validation (if you build large form application you need library i.e. https://formik.org/)
 - useRef Hook
+- firebase setup
+- deploying our app to production (https://netflix-project-48437.web.app/)
 
 # Features
 
