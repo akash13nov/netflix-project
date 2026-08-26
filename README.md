@@ -10,6 +10,7 @@
 - useRef Hook
 - firebase setup
 - deploying our app to production (https://netflix-project-48437.web.app/)
+- Create Signup User Account
 
 # Features
 
