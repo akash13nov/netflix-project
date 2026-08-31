@@ -29,10 +29,6 @@ Project URL : https://netflix-project-48437.web.app/
     - Title & Description
     - MovieSuggestions
       - MovieLists \* N
-- NetflixGPT
+- Netflix Project
   - Search Bar
   - Movie Suggestions
-
-# Project Setup
-
-- Before starting the project please add .env file and add TMDB and OPENAI KEY into it.
