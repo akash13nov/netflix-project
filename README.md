@@ -11,6 +11,10 @@
 - firebase setup
 - deploying our app to production (https://netflix-project-48437.web.app/)
 - Create Signup User Account
+- Implement Sign In user Api
+- Created Redux store with userSlice
+- Implement Sign Out
+- Update Profile
 
 # Features
 
