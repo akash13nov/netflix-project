@@ -9,6 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -46,7 +47,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
@@ -95,7 +96,10 @@ const Login = () => {
   };
 
   return (
-    <div className="relative bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/6ef286cc-b89b-4da3-bab7-62971d87dbd0/web/IN-en-20260817-TRIFECTA-perspective_dce6e6bc-2bd3-45f2-9086-211bf8b6e8c8_large.jpg')] bg-cover bg-center h-screen">
+    <div
+      className="relative bg-cover bg-center h-screen"
+      style={{ backgroundImage: `url(${BG_URL})` }}
+    >
       <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
         <Header />
         <div className="w-md p-13 bg-black/70 rounded">
