@@ -48,8 +48,8 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent">
-      <div className="m-auto w-4/5 p-6.5 flex justify-between items-center ">
-        <img className="h-10" src={LOGO} alt="logo" />
+      <div className="m-auto w-11/12 py-5 flex justify-between items-center ">
+        <img className="h-8" src={LOGO} alt="logo" />
         {user && (
           <div className="flex gap-4 items-center">
             <img src={user?.photoURL} alt="Profile-icon" className="h-8" />
