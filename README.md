@@ -37,6 +37,7 @@ Project URL : https://netflix-project-48437.web.app/
 - TMDB Image CDN URL
 - Made the Browsre page amazing with Tailwind CSS
 - usePopularMovies Custom hook
+- useTopRatedMovies & useUpcomingMovies Custom hook
 
 # Features
 
