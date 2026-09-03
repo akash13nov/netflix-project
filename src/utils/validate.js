@@ -1,4 +1,4 @@
-const validate = (email, password, name) => {
+export const validate = (email, password, name) => {
   const isEmailValid = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(
     email,
   );
@@ -13,5 +13,3 @@ const validate = (email, password, name) => {
 
   return null;
 };
-
-export default validate;
