@@ -8,11 +8,11 @@ const MoviesListContainer = () => {
     movies.nowPlayingMovies && (
       <div className="bg-black">
         <div className="relative z-0 -mt-64">
-          <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
-          <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
-          <MovieList title={"Popular Movies"} movies={movies.popularMovies} />
-          <MovieList title={"Upcoming Movies"} movies={movies.upcomingMovies} />
-          <MovieList title={"Horror Movies"} movies={movies.nowPlayingMovies} />
+          <MovieList title="nowPlaying" movies={movies.nowPlayingMovies} />
+          <MovieList title="topRated" movies={movies.topRatedMovies} />
+          <MovieList title="popular" movies={movies.popularMovies} />
+          <MovieList title="upcoming" movies={movies.upcomingMovies} />
+          <MovieList title="horror" movies={movies.nowPlayingMovies} />
         </div>
       </div>
     )

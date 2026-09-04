@@ -7,6 +7,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { ARROW_DOWN_ICON, LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import lang from "../utils/languageConstants";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Header = () => {
 
   const user = useSelector((store) => store.user);
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
+  const langKey = useSelector((store) => store.config.lang);
 
   const handleSignOut = () => {
     signOut(auth)
@@ -66,23 +68,21 @@ const Header = () => {
         {user && (
           <div className="flex gap-4 items-center">
             <div>
-              {showGptSearch && (
-                <select
-                  onChange={handleChangeLanguage}
-                  className="appearance-none px-3 py-1.5 text-left pr-8 bg-transparent border-[1px] border-white rounded-full text-white text-base font-medium cursor-pointer transition-colors duration-200 hover:bg-white hover:text-black focus:outline-none bg-[length:0.7rem] bg-[right_0.7rem_center] bg-no-repeat"
-                  style={{ backgroundImage: `url("${ARROW_DOWN_ICON}")` }}
-                >
-                  {SUPPORTED_LANGUAGES.map((lang) => (
-                    <option
-                      key={lang.identifier}
-                      value={lang.identifier}
-                      className="bg-black text-white"
-                    >
-                      {lang.name}
-                    </option>
-                  ))}
-                </select>
-              )}
+              <select
+                onChange={handleChangeLanguage}
+                className="appearance-none px-3 py-1.5 text-left pr-8 bg-transparent border-[1px] border-white rounded-full text-white text-base font-medium cursor-pointer transition-colors duration-200 hover:bg-white hover:text-black focus:outline-none bg-[length:0.7rem] bg-[right_0.7rem_center] bg-no-repeat"
+                style={{ backgroundImage: `url("${ARROW_DOWN_ICON}")` }}
+              >
+                {SUPPORTED_LANGUAGES.map((lang) => (
+                  <option
+                    key={lang.identifier}
+                    value={lang.identifier}
+                    className="bg-black text-white"
+                  >
+                    {lang.name}
+                  </option>
+                ))}
+              </select>
             </div>
             <button
               onClick={handleGptSearch}
@@ -125,9 +125,9 @@ const Header = () => {
             <img src={user?.photoURL} alt="Profile-icon" className="h-8" />
             <button
               onClick={handleSignOut}
-              className="text-white bg-red-500 rounded-3xl px-5 py-2 cursor-pointer"
+              className="text-white bg-red-500 rounded-3xl px-5 py-2 cursor-pointer transition-all duration-200 hover:bg-red-600 hover:shadow-lg hover:scale-105 active:scale-95"
             >
-              Sign Out
+              {lang[langKey].netflixSignOut}
             </button>
           </div>
         )}
