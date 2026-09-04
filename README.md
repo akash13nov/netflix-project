@@ -38,6 +38,9 @@ Project URL : https://netflix-project-48437.web.app/
 - Made the Browsre page amazing with Tailwind CSS
 - usePopularMovies Custom hook
 - useTopRatedMovies & useUpcomingMovies Custom hook
+- GPT Search Page
+- GPT Search Bar
+- Multi-language Feature in our App
 
 # Features
 

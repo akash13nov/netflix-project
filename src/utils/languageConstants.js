@@ -5,7 +5,7 @@ const lang = {
   },
   "hi-IN": {
     search: "खोज",
-    gptSearchPlaceholder: "आज आप क्या देखना चुनते हैं?",
+    gptSearchPlaceholder: "आज आप क्या देखना चाहेंगे?",
   },
   "sp-ES": {
     search: "Buscar",
@@ -13,7 +13,7 @@ const lang = {
   },
   "fr-FR": {
     search: "Chercher",
-    gptSearchPlaceholder: "Qu'est-ce que vous aimeriez regarder aujourd'hui?",
+    gptSearchPlaceholder: "Que souhaitez-vous regarder aujourd'hui ?",
   },
 };
 
