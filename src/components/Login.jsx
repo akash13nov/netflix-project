@@ -97,12 +97,12 @@ const Login = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center h-screen"
+      className="relative bg-cover bg-center min-h-dvh landscape:min-h-[500px]"
       style={{ backgroundImage: `url(${BG_URL})` }}
     >
-      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+      <div className="absolute inset-0 bg-black/30">
         <Header />
-        <div className="w-md p-13 bg-black/70 rounded">
+        <div className="w-5/6 mt-20 mx-auto p-5 md:w-md md:p-13 bg-black/70 rounded md:m-auto md:mt-36">
           <h1 className="text-3xl font-bold text-white">
             {isSignInForm ? "Sign In" : "Sign Up"}
           </h1>

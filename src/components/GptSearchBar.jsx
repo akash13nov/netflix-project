@@ -30,22 +30,22 @@ const GptSearchBar = () => {
 
   return (
     <div
-      className="h-full pt-40 bg-cover bg-no-repeat"
+      className="h-full pt-20 bg-cover bg-no-repeat md:pt-40"
       style={{ backgroundImage: `url(${BG_SEARCH_URL})` }}
     >
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="flex items-center justify-between gap-2 w-9/12 m-auto relative"
+        className="flex items-center justify-between gap-2 relative px-5 sm:w-9/12 sm:m-auto"
       >
         <input
           ref={searchInputRef}
           type="text"
           placeholder={lang[langKey].gptSearchPlaceholder}
-          className="border border-[#D8D5CE] rounded-3xl pl-3 pr-12 h-12 w-full text-xl text-[#D8D5CE] placeholder-[#D8D5CE] outline-0"
+          className="border border-[#D8D5CE] rounded-full pl-3 pr-12 h-12 w-full text-sm text-[#D8D5CE] placeholder-[#D8D5CE] outline-0 sm:text-2xl md:text-3xl"
         />
         <button
           onClick={handleSearchClick}
-          className="absolute w-10 h-10 bg-red-500 flex items-center justify-center rounded-full right-1 text-white cursor-pointer"
+          className="absolute w-10 h-10 bg-red-500 flex items-center justify-center rounded-full right-6 text-white cursor-pointer sm:right-6"
         >
           <svg
             width="20"

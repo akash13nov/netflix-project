@@ -9,7 +9,7 @@ const MovieList = ({ title, movies }) => {
   return (
     <div>
       <div className="flex flex-col px-5">
-        <h1 className="text-3xl font-bold my-6 pt-3 text-[#D8D5CE]">
+        <h1 className="text-xl font-bold my-3 text-[#D8D5CE] md:text-3xl md:my-6 md:pt-3">
           {lang[langKey]?.sections[title] || title}
         </h1>
         <div className="flex overflow-x-scroll overflow-y-hidden scrollbar-hide">

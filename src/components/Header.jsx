@@ -62,11 +62,11 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute top-0 left-0 w-full z-20 bg-gradient-to-b from-black/80 to-transparent">
-      <div className="m-auto w-11/12 py-5 flex justify-between items-center ">
+    <header className="w-full bg-black">
+      <div className="m-auto w-11/12 py-5 flex justify-between items-center flex-col gap-7 sm:flex-row sm:gap-0">
         <img className="h-8" src={LOGO} alt="logo" />
         {user && (
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-3 items-center w-full justify-center sm:w-auto sm:justify-baseline sm:gap-4">
             <div>
               <select
                 onChange={handleChangeLanguage}
@@ -122,7 +122,11 @@ const Header = () => {
                 </span>
               )}
             </button>
-            <img src={user?.photoURL} alt="Profile-icon" className="h-8" />
+            <img
+              src={user?.photoURL}
+              alt="Profile-icon"
+              className="hidden md:block h-8"
+            />
             <button
               onClick={handleSignOut}
               className="text-white bg-red-500 rounded-3xl px-5 py-2 cursor-pointer transition-all duration-200 hover:bg-red-600 hover:shadow-lg hover:scale-105 active:scale-95"
