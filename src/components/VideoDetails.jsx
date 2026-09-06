@@ -38,7 +38,7 @@ const VideoDetails = ({ title, overview }) => {
               stroke="none"
             ></circle>
           </svg>
-          {lang[langKey]?.unmute || "Unmute"}
+          {lang[langKey]?.moreInfo || "More Info"}
         </button>
       </div>
     </div>

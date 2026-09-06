@@ -2,7 +2,7 @@ const lang = {
   "en-US": {
     movieTitle: "Spider-Man: Brand New Day",
     play: "Play",
-    unmute: "Unmute",
+    moreInfo: "More Info",
     sections: {
       nowPlaying: "Now Playing",
       topRated: "Top Rated",
@@ -17,7 +17,7 @@ const lang = {
   "hi-IN": {
     movieTitle: "स्पाइडर-मैन: ब्रांड न्यू डे",
     play: "चलाएँ",
-    unmute: "अनम्यूट",
+    moreInfo: "अधिक जानकारी",
     sections: {
       nowPlaying: "अब चल रहा है",
       topRated: "शीर्ष रेटेड",
@@ -32,7 +32,7 @@ const lang = {
   "sp-ES": {
     movieTitle: "Spider-Man: Un nuevo día",
     play: "Jugar",
-    unmute: "reactivar el sonido",
+    moreInfo: "Más información",
     sections: {
       nowPlaying: "Reproduciendo ahora",
       topRated: "Top Rated",
@@ -47,7 +47,7 @@ const lang = {
   "fr-FR": {
     movieTitle: "Spider-Man: Un jour nouveau",
     play: "Jouer",
-    unmute: "Réactiver le son",
+    moreInfo: "Plus d'informations",
     sections: {
       nowPlaying: "En cours de lecture",
       topRated: "Les mieux notés",

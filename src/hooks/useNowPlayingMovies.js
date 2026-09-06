@@ -10,6 +10,10 @@ const useNowPlayingMovies = () => {
 
   const langKey = useSelector((store) => store.config.lang);
 
+  const nowPlayingMovies = useSelector(
+    (store) => store.movies.nowPlayingMovies,
+  );
+
   const getNowPlayingMovies = async () => {
     const data = await fetch(
       `https://api.themoviedb.org/3/movie/now_playing?language=${langKey}`,
@@ -21,7 +25,7 @@ const useNowPlayingMovies = () => {
   };
 
   useEffect(() => {
-    getNowPlayingMovies();
+    if (!nowPlayingMovies) getNowPlayingMovies();
   }, [langKey]);
 };
 
